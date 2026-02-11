@@ -1,6 +1,7 @@
 public abstract class Sprite {
 
     // Declaring fields
+    protected static final double GRAVITY = 0.5;
     protected double x, y;
     protected double width, height;
     protected double velocityX, velocityY;
@@ -36,8 +37,14 @@ public abstract class Sprite {
     public double getBottom() { return y + height; }
 
     // Implementing gravity
-    public void applyGravity(double gravity) {
-        velocityY += gravity;
+    public void applyGravity() {
+        velocityY += GRAVITY;
+    }
+
+    // Updating Sprite
+    public void update() {
+        applyGravity();   // or leave empty
+        updatePos();
     }
 
     public void stopVertical() {
