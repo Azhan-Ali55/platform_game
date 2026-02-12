@@ -31,4 +31,5 @@ public class Platform extends Sprite {
     // Getters for speed
     public boolean isMoving() { return isMoving; }
     public double getMoveSpeed() { return movingSpeed; }
+
 }
