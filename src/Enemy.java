@@ -1,5 +1,5 @@
 public abstract class Enemy extends Sprite {
-    // Variables to hold Enemy stats
+    // Variables to store Enemy stats
     protected double movementSpeed;
     protected boolean movingLeft;
 
