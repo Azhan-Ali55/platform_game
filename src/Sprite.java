@@ -30,11 +30,26 @@ public abstract class Sprite {
         return x < other.x + other.width && x + width > other.x && y < other.y + other.height && y + height > other.y;
     }
 
-    // Methods for returning edges
+    // Getters for returning edges
     public double getLeft() { return x; }
     public double getRight() { return x + width; }
     public double getTop() { return y; }
     public double getBottom() { return y + height; }
+
+    // Getters for position and size
+    public double getX() { return x; }
+    public double getY() { return y; }
+    public double getWidth() { return width; }
+    public double getHeight() { return height; }
+
+    // Setters for position
+    public void setX(double x) { this.x = x; }
+    public void setY(double y) { this.y = y; }
+
+    // Getter to return if the sprite is on ground
+    public boolean isOnGround() { return onGround; }
+    // Setter to set the sprite on the ground
+    public void setOnGround(boolean onGround) { this.onGround = onGround; }
 
     // Implementing gravity
     public void applyGravity() {
@@ -47,6 +62,7 @@ public abstract class Sprite {
         updatePos();
     }
 
+    // Method to stop vertical velocity
     public void stopVertical() {
         velocityY = 0;
     }
